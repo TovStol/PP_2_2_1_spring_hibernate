@@ -44,6 +44,17 @@ public class Car {
         this.series = series;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @OneToOne(mappedBy = "userCar")
+    private User user;
+
     public Car(String model, int series) {
         this.model = model;
         this.series = series;
